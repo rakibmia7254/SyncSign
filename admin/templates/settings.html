@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - SyncSign</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="flex h-screen">
+        <div class="bg-gray-800 text-white w-64 py-8 px-4">
+            <button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar"
+              type="button"
+              class="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 text-gray-400 hover:bg-gray-700 focus:ring-gray-600">
+              <span class="sr-only">Open sidebar</span>
+              <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path clip-rule="evenodd" fill-rule="evenodd"
+                  d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
+                </path>
+              </svg>
+            </button>
+            <!-- Sidebar content here -->
+            <aside id="default-sidebar"
+              class="fixed mt-2 top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+              aria-label="Sidenav">
+              <div class="overflow-y-auto py-5 px-3 h-full border-r border-gray-200 bg-gray-800 border-gray-700">
+                <div class="flex items-center w-5 mb-6 h-10">
+                  <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+                    <img class="w-8 h-8 ml-2" src="/admin/logos/85994234-6906-40c6-bb01-c7223544bfd9.png" alt="logo">
+                    <span class="ml-3 text-xl">SyncSign</span>
+                  </a>
+                </div>
+                <ul class="space-y-2 ml-2">
+                  <li>
+                    <a href="/admin"
+                      class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-100 hover:bg-gray-700 group">
+                      <svg aria-hidden="true"
+                        class="w-6 h-6 text-gray-400 transition duration-75 text-gray-400 group-hover:text-gray-900 group-hover:text-white"
+                        fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path>
+                        <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
+                      </svg>
+                      <span class="ml-3">Apps</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/admin/users"
+                      class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-100 hover:bg-gray-700 group">
+                      <svg
+                        class="w-6 h-6 text-gray-400 transition duration-75 text-gray-400 group-hover:text-gray-900 group-hover:text-white"
+                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
+                        <path
+                          d="M14 2a3.963 3.963 0 0 0-1.4.267 6.439 6.439 0 0 1-1.331 6.638A4 4 0 1 0 14 2Zm1 9h-1.264A6.957 6.957 0 0 1 15 15v2a2.97 2.97 0 0 1-.184 1H19a1 1 0 0 0 1-1v-1a5.006 5.006 0 0 0-5-5ZM6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z" />
+                      </svg>
+                      <span class="ml-3">Users</span>
+                    </a>
+                  </li>
+                </ul>
+                <ul class="pt-5 mt-5 space-y-2 border-t border-gray-200 border-gray-700">
+                  <li>
+                    <a href="/admin/settings"
+                      class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg text-white hover:bg-gray-100 hover:bg-gray-700 group">
+                      <svg aria-hidden="true"
+                        class="w-6 h-6 text-gray-400 transition duration-75 text-gray-400 group-hover:text-gray-900 group-hover:text-white"
+                        fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                          d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
+                          clip-rule="evenodd"></path>
+                      </svg>
+                      <span class="ml-3">Settings</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/admin/logout"
+                      class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 hover:bg-gray-700 text-white group">
+                      <svg aria-hidden="true"
+                        class="flex-shrink-0 w-6 h-6 text-gray-400 transition duration-75 text-gray-400 group-hover:text-gray-900 group-hover:text-white"
+                        fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
+                        <path fill-rule="evenodd"
+                          d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z"
+                          clip-rule="evenodd"></path>
+                      </svg>
+                      <span class="ml-3">Logout</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+        <div class="flex-1 flex w-full items-center justify-center p-8 text-gray-300 bg-gray-900">
+            <div class="w-full rounded-lg shadow border md:mt-0 sm:max-w-md xl:p-0 bg-gray-800 border-gray-700">
+                <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+                    <h1 class="text-xl font-bold leading-tight tracking-tight  md:text-2xl text-white">
+                        Settings
+                    </h1>
+                    {% with messages = get_flashed_messages()%}
+                    {% if messages%}
+                    {% for message in messages%}
+                    <div class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-100 dark:bg-gray-800 dark:text-red-400"
+                        role="alert">
+                        {{message}}
+                    </div>
+                    {%endfor%}
+                    {%endif%}
+                    {%endwith%}
+                    <form class="space-y-4 md:space-y-6" method="POST">
+                        <input type="hidden" name="csrf_token" value = "{{ csrf_token() }}" /> 
+                        <div>
+                            <label for="username" class="block mb-2 text-sm font-medium text-white">Username</label>
+                            <input type="text" name="username" id="username"
+                                class="bg-gray-700 border border-gray-600 text-white sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="" value="{{session['admin']}}" required>
+                        </div>
+                        <div>
+                            <label for="password" class="block mb-2 text-sm font-medium text-white">Old Password</label>
+                            <div class="flex items-center justify-between gap-4">
+                                <input type="password" name="password" id="password" placeholder="••••••••"
+                                    class="bg-gray-700 border border-gray-600 text-white sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    required="">
+                                <button type="button" id="show_password"
+                                    class="p-8 text-white border-gray-600 border bg-trasparent hover:bg-gray-600 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+
+                                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" stroke="#f8f7f7">
+
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke="#CCCCCC" stroke-width="0.384" />
+
+                                        <g id="SVGRepo_iconCarrier">
+                                            <path
+                                                d="M15.0007 12C15.0007 13.6569 13.6576 15 12.0007 15C10.3439 15 9.00073 13.6569 9.00073 12C9.00073 10.3431 10.3439 9 12.0007 9C13.6576 9 15.0007 10.3431 15.0007 12Z"
+                                                stroke="#ffffff" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M12.0012 5C7.52354 5 3.73326 7.94288 2.45898 12C3.73324 16.0571 7.52354 19 12.0012 19C16.4788 19 20.2691 16.0571 21.5434 12C20.2691 7.94291 16.4788 5 12.0012 5Z"
+                                                stroke="#ffffff" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </g>
+
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="new_password" class="block mb-2 text-sm font-medium text-white">New Password</label>
+                            <div class="flex items-center justify-between gap-4">
+                                <input type="password" name="new_password" id="new_password" placeholder="••••••••"
+                                    class="bg-gray-700 border border-gray-600 text-white sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    required="">
+                                <button type="button" id="show_new_password"
+                                    class="p-8 text-white border-gray-600 border bg-trasparent hover:bg-gray-600 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+
+                                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" stroke="#f8f7f7">
+
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke="#CCCCCC" stroke-width="0.384" />
+
+                                        <g id="SVGRepo_iconCarrier">
+                                            <path
+                                                d="M15.0007 12C15.0007 13.6569 13.6576 15 12.0007 15C10.3439 15 9.00073 13.6569 9.00073 12C9.00073 10.3431 10.3439 9 12.0007 9C13.6576 9 15.0007 10.3431 15.0007 12Z"
+                                                stroke="#ffffff" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M12.0012 5C7.52354 5 3.73326 7.94288 2.45898 12C3.73324 16.0571 7.52354 19 12.0012 19C16.4788 19 20.2691 16.0571 21.5434 12C20.2691 7.94291 16.4788 5 12.0012 5Z"
+                                                stroke="#ffffff" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </g>
+
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="confirm_new_password" class="block mb-2 text-sm font-medium text-white">Confirm New
+                                Password</label>
+                            <div class="flex items-center justify-between gap-4">
+                                <input type="password" name="confirm_new_password" id="confirm_new_password"
+                                    placeholder="••••••••"
+                                    class="bg-gray-700 border border-gray-600 text-white sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    required="">
+                                <button type="button" id="show_confirm_new_password"
+                                    class="p-8 text-white border-gray-600 border bg-trasparent hover:bg-gray-600 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+
+                                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" stroke="#f8f7f7">
+
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke="#CCCCCC" stroke-width="0.384" />
+
+                                        <g id="SVGRepo_iconCarrier">
+                                            <path
+                                                d="M15.0007 12C15.0007 13.6569 13.6576 15 12.0007 15C10.3439 15 9.00073 13.6569 9.00073 12C9.00073 10.3431 10.3439 9 12.0007 9C13.6576 9 15.0007 10.3431 15.0007 12Z"
+                                                stroke="#ffffff" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M12.0012 5C7.52354 5 3.73326 7.94288 2.45898 12C3.73324 16.0571 7.52354 19 12.0012 19C16.4788 19 20.2691 16.0571 21.5434 12C20.2691 7.94291 16.4788 5 12.0012 5Z"
+                                                stroke="#ffffff" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </g>
+
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div>
+                            <button type="submit"
+                                class="w-full mb-2 mt-2 text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+<script>
+    tailwind.config = {
+        darkMode: 'class',
+        theme: {
+            extend: {
+                colors: {
+                    primary: { "50": "#eff6ff", "100": "#dbeafe", "200": "#bfdbfe", "300": "#93c5fd", "400": "#60a5fa", "500": "#3b82f6", "600": "#2563eb", "700": "#1d4ed8", "800": "#1e40af", "900": "#1e3a8a", "950": "#172554" }
+                }
+            },
+            fontFamily: {
+                'body': [
+                    'Inter',
+                    'ui-sans-serif',
+                    'system-ui',
+                    '-apple-system',
+                    'system-ui',
+                    'Segoe UI',
+                    'Roboto',
+                    'Helvetica Neue',
+                    'Arial',
+                    'Noto Sans',
+                    'sans-serif',
+                    'Apple Color Emoji',
+                    'Segoe UI Emoji',
+                    'Segoe UI Symbol',
+                    'Noto Color Emoji'
+                ],
+                'sans': [
+                    'Inter',
+                    'ui-sans-serif',
+                    'system-ui',
+                    '-apple-system',
+                    'system-ui',
+                    'Segoe UI',
+                    'Roboto',
+                    'Helvetica Neue',
+                    'Arial',
+                    'Noto Sans',
+                    'sans-serif',
+                    'Apple Color Emoji',
+                    'Segoe UI Emoji',
+                    'Segoe UI Symbol',
+                    'Noto Color Emoji'
+                ]
+            }
+        }
+    }
+
+    const passwordField = document.getElementById('password');
+    const showPasswordButton = document.getElementById('show_password');
+    const newpasswordField = document.getElementById('new_password');
+    const shownewPasswordButton = document.getElementById('show_new_password');
+    const confirmpasswordField = document.getElementById('confirm_new_password');
+    const showconfirmpasswordButton = document.getElementById('show_confirm_new_password');
+
+    // Add event listener to the show password button
+    showPasswordButton.addEventListener('click', function () {
+        // Check if the password field is currently of type "password"
+        if (passwordField.type === 'password') {
+            // If yes, change it to type "text" to reveal the password
+            passwordField.type = 'text';
+            // Change the button text to "Hide Password"
+        } else {
+            // If not, change it back to type "password" to hide the password
+            passwordField.type = 'password';
+            // Change the button text to "Show Password
+        }
+    });
+
+    shownewPasswordButton.addEventListener('click', function () {
+        // Check if the password field is currently of type "password"
+        if (newpasswordField.type === 'password') {
+            // If yes, change it to type "text" to reveal the password
+            newpasswordField.type = 'text';
+        } else {
+            // If not, change it back to type "password" to hide the password
+            newpasswordField.type = 'password';
+        }
+    });
+
+    showconfirmpasswordButton.addEventListener('click', function () {
+        // Check if the password field is currently of type "password"
+        if (confirmpasswordField.type === 'password') {
+            // If yes, change it to type "text" to reveal the password
+            confirmpasswordField.type = 'text';
+        } else {
+            // If not, change it back to type "password" to hide the password
+            confirmpasswordField.type = 'password';
+        }
+    })
+</script>
+
+</html>
